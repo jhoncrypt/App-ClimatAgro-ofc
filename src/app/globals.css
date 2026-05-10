@@ -1,0 +1,78 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 224 71% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 90%;
+    --secondary-foreground: 224 71% 4%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 210 4% 45%;
+    --accent: 25 95% 55%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 20% 85%;
+    --input: 210 20% 85%;
+    --ring: 221 83% 53%;
+    --chart-1: 150 70% 45%; /* Green */
+    --chart-2: 25 95% 55%;  /* Intense Orange */
+    --chart-3: 205 85% 45%; /* Intense Blue */
+    --chart-4: 30 100% 60%;
+    --chart-5: 220 80% 60%;
+    --radius: 0.5rem;
+    
+    --calendar-event: 150 70% 45%; /* Green for calendar events */
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 15%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 222 47% 11%;
+    --muted-foreground: 210 40% 60%;
+    --accent: 25 95% 55%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 40% 25%;
+    --input: 210 40% 25%;
+    --ring: 217 91% 60%;
+    --chart-1: 150 70% 45%;
+    --chart-2: 25 95% 55%;
+    --chart-3: 205 85% 45%;
+    --chart-4: 30 100% 60%;
+    --chart-5: 220 80% 60%;
+
+    --calendar-event: 150 70% 45%;
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
