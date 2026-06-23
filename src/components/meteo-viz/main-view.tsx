@@ -683,11 +683,11 @@ export function MainView({
     const next7Days = todayIndex !== -1 ? dailyData.slice(todayIndex, todayIndex + 7) : dailyData.slice(0, 7);
     
     const getDailySprayingCondition = (day: DailyRow, isToday: boolean) => {
-        const temp = isToday && currentHourly?.temperature_2m !== null ? currentHourly.temperature_2m : day.temperature_2m_max;
-        const wind = isToday && currentHourly?.wind_speed_10m !== null ? currentHourly.wind_speed_10m : day.wind_speed_10m_max;
-        const humidity = isToday && currentHourly?.relative_humidity_2m !== null ? currentHourly.relative_humidity_2m : day.relative_humidity_2m_min;
+        const temp = isToday && currentHourly?.temperature_2m != null ? currentHourly.temperature_2m : day.temperature_2m_max;
+        const wind = isToday && currentHourly?.wind_speed_10m != null ? currentHourly.wind_speed_10m : day.wind_speed_10m_max;
+        const humidity = isToday && currentHourly?.relative_humidity_2m != null ? currentHourly.relative_humidity_2m : day.relative_humidity_2m_min;
         const precipProb = day.precipitation_probability_max;
-        const currentPrecip = isToday && currentHourly?.precipitation !== null ? currentHourly.precipitation : null;
+        const currentPrecip = isToday && currentHourly?.precipitation != null ? currentHourly.precipitation : null;
 
         const getWindStatus = (w: number | null) => {
           if (w === null) return 'ok';
